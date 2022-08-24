@@ -1,0 +1,741 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    user-select: none;
+    font-family: "font-1";
+}
+
+:root {
+    --bg-color: #FDFAF6;
+    --sub-color: #F4CFDF;
+    --black-color: #2E2E2E;
+}
+
+@font-face {
+    font-family: "font-1";
+    src: url(./assets/fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "font-2";
+    src: url(./assets/fonts/3d_isometric/3DIsometric-Bold.ttf);
+}
+
+/* .mouse--follower {
+
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    opacity: 1;
+    border: 4px solid #F4CFDF;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.05s;
+} */
+
+                /* SLIDER */
+
+.slide {
+    width: 100vw;
+    height: 100vh;
+    background: var(--bg-color)
+}
+
+.blocHorizontal {
+    display: flex;
+    flex-direction: row;
+    width: 400vw;
+    transform: rotate(90deg) translateY(-100vh);
+    transform-origin: top left;
+}
+
+.container {
+    width: 100vh;
+    height: 100vw;
+    transform: rotate(-90deg) translateX(-100vh);
+    transform-origin: top left;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.one {
+    background: #FDFAF6;
+}
+
+
+
+
+
+                                                 /* TITLE */
+
+
+
+.titles-container h1 {
+    font-size: 40px;
+    padding-top: 250px;
+    padding-left: 240px;
+}
+
+                                                /* SOCIAL MEDIA */
+
+.social-media {
+    z-index: 2;
+    position: absolute;
+    bottom: 30%;
+    left: 242px;
+    opacity: 1;
+}
+
+.bx {
+    margin-right: 70px;
+    display: inline-block;
+    padding: 10px 10px;
+    background: #F4CFDF;
+    border: transparent;
+    border-radius: 50%;
+    color: #232323;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.bx:hover {
+    transform: scale(1.2);
+    background: #232323;
+    color: #F4CFDF;
+}
+
+#anim-socialmedia-one {
+    opacity: 0;
+    transition: ease .8s;
+}
+
+#anim-socialmedia-two {
+    opacity: 0;
+    transition: ease .8s;
+}
+
+#anim-socialmedia-three {
+    opacity: 0;
+    transition: ease .8s;
+}
+
+                                                                             /* MENU */
+
+
+.sub-background {
+    z-index: 2;
+    position: absolute;
+    left: 120vh;
+    top: 10vh;
+    height: 60vh;
+    width: 40vh;
+    background: #F4CFDF;
+}
+
+/* .sub-background:hover {
+    will-change: transform;
+    transform: perspective(2000px) rotateX(7deg) rotateY(10deg) scale3d(1.05, 1.05, 10.5);
+} */
+
+.shadow-background {
+    z-index: 0;
+    position: absolute;
+    left: 125vh;
+    top: 6vh;
+    height: 60vh;
+    width: 40vh;
+    background:#2E2E2E;
+    transition: .5s ease-in-out;
+}
+
+.menu-content {
+    margin-top: 10.3%;
+    list-style-type: none;
+    font-weight: 900;
+    font-size: 2.2rem;
+    line-height: 120px;
+}
+
+.menu-content li:hover {
+    padding-left: 20px;
+    margin-right: 30px;
+    max-width: 400px;
+    color: var(--sub-color);
+}
+
+.menu-content li:hover {
+    background: var(--black-color);
+}
+
+/* .menu-content li:hover + .shadow-background {
+    background: var(--sub-color);
+    will-change: transform;
+    transform: perspective(2000px) rotateX(7deg) rotateY(14deg) scale3d(1.05, 1.05, 10.5);
+} */
+
+
+.menu-content li:hover {
+    transform: scale(1.1);
+    will-change: transform;
+    transform: perspective(2000px) rotateX(7deg) rotateY(14deg) scale3d(1.05, 1.05, 10.5);
+    color: var(--sub-color);
+}
+
+.menu-content li {
+    transition: .15s ease-in-out;
+    cursor: pointer;
+    letter-spacing: 4px;
+}
+
+.sub-background:hover + .shadow-background {
+    will-change: transform;
+    transform: perspective(2000px) rotateX(7deg) rotateY(14deg) scale3d(1.05, 1.05, 10.5);
+}
+
+#sub-background-anim {
+    opacity: 0;
+    transition: .3s ease-in;
+}
+
+#shadow-background-anim {
+    opacity: 0;
+    transition: .3s ease-in;
+}
+
+a {
+    text-decoration: none;
+
+    color: inherit;
+}
+
+
+
+
+
+                                                    /* MUSIC BTN */
+
+.music-background {
+    z-index: 1;
+    position: absolute;
+    left: 123.5vh;
+    top: 82vh;
+    height: 12vh;
+    width: 12vw;
+    background: var(--black-color);
+    transition: .2s ease-in;   
+}
+
+.shadow-music-background {
+    z-index: 0;
+    position: absolute;
+    left: 135.5vh;
+    top: 76vh;
+    height: 12vh;
+    width: 12vw;
+    background: var(--sub-color);
+    transition: .4s ease-in;
+}
+
+.music-background p {
+    color: var(--sub-color);
+    margin-left: 17px;
+    margin-top: 17px;
+    line-height: 40px;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.music-background:hover {
+    transform: scale(1.8);
+    will-change: transform;
+    transform: perspective(2000px) rotateX(14deg) rotateY(14deg) scale3d(1.05, 1.05, 10.5);
+    background: var(--sub-color);
+}
+
+
+
+.music-background:hover > .music-btn {
+    color: var(--black-color);
+    font-weight: 900;
+}
+
+.music-background:hover + .shadow-music-background {
+    transform: scale(1.8);
+    will-change: transform;
+    transform: perspective(2000px) rotateX(14deg) rotateY(14deg) scale3d(1.05, 1.05, 10.5);
+    background: var(--black-color);
+}
+
+#music-background-anim {
+    opacity: 0;
+    transition: .3s ease-in;
+}
+
+#music-shadow-anim {
+    opacity: 0;
+    transition: .5s ease-in;
+}
+
+                                                 /* LINE */
+
+svg {
+    width: 800px;
+    position: absolute;
+    bottom: 1%;
+    left: 163px;
+
+
+}
+
+svg .draw {
+    stroke: var(--black-color);
+    stroke-width: 4px;
+    stroke-dasharray: 5000;
+    fill: transparent;
+    animation: animate 5s linear infinite;
+}
+
+#line-home {
+    opacity: 0;
+    transition: .5s ease;
+}
+                
+
+
+                                                                /* ABOUT ME PAGE */
+
+.two {
+    background: var(--bg-color);
+}
+
+                                            /* HAMBURGER MENU */
+
+                                            /* Dropdown Button */
+.dropbtn {
+    z-index: 100;
+    background-color: transparent;
+    color: black;
+    padding: 16px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    transition: all .25s ease-in;
+    font-family: "font-1";
+  }
+  
+  .dropbtn:hover, .dropbtn:focus {
+    transform: scale(1.1);
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    padding-top: 50px;
+    padding-left: 120px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    font-family: "font-1";
+    transition: all .2s ease-in-out;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: "font-1";
+    transition: all .3s ease-in-out;
+  }
+  
+  .dropdown-content a:hover {background-color: var(--sub-color)}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}
+
+
+
+
+.menu-burger {
+    padding: 20px;
+    /* background: var(--sub-color); */
+    width: 140px;
+
+}
+
+.menu-burger-contain span {
+    align-items: line;
+    display: block; 
+    line-height: 30px;
+}
+/* 
+.menu-burger-contain {
+
+} */
+
+                /* ANIMATION X */
+
+.burger {
+    width: 42px;
+    height: 24px;
+    /* background: black; */
+    cursor: pointer;
+    position: relative;
+}
+
+.burger span {
+    width: 100%;
+    height: 4px;
+    background: black;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color .2s ease-in-out;
+}
+
+.burger span::before, .burger span::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: black;
+    transition: transform .7s ease-in-out;
+}
+
+.burger span::before {
+    transform: translateY(-10px);
+}
+
+.burger span::after {
+    transform: translateY(10px);
+}
+
+.burger.active span {
+    background-color: transparent;
+}
+
+.burger.active span::before {
+    transform: translateY(0px) rotateZ(45deg);
+}
+
+.burger.active span::after {
+    transform: translateY(0px) rotateZ(-45deg);
+}
+
+
+                                                                 /* TITLE ABOUTME */
+
+.sub-background-two {
+    z-index: 2;
+    position: absolute;
+    left: 28%;
+    height: 25vh;
+    width: 40vw;
+    background: var(--black-color);
+    top: 10vh;
+    transition: .2s ease-in;
+}
+
+.sub-background-two:hover {
+    transform: scale(1.2);
+    will-change: transform;
+    transform: perspective(1000px) rotateX(4.8deg) rotateY(10.23deg) scale3d(1.05, 1.05, 10.5);
+    background: var(--sub-color);
+}
+
+.sub-background-two:hover + .shadow-background-two {
+    transform: scale(1.2);
+    will-change: transform;
+    transform: perspective(1000px) rotateX(4.8deg) rotateY(10.23deg) scale3d(1.05, 1.05, 10.5);
+    background: var(--black-color);
+}
+
+.aboutme-title {
+    transition: .2s ease;
+}
+
+.sub-background-two:hover > .aboutme-title {
+    color: var(--black-color);
+}
+
+.shadow-background-two {
+    z-index: 0;
+    position: absolute;
+    left: 28.6%;
+    top: 6vh;
+    height: 25vh;
+    width: 40vw;
+    background:var(--sub-color);
+    transition: .4s ease-in;
+}
+
+.sub-background-two h2, h3 {
+    margin-left: 25px;
+    color: var(--sub-color);
+}
+
+.sub-background-two h2 {
+    font-weight: 900;
+    font-size: 2rem;
+    line-height: 40px;
+    letter-spacing: 12px;
+}
+
+.sub-background-two h3 {
+    margin-top: 40px;
+    font-weight: 900;
+    font-size: 1.3rem;
+    letter-spacing: 9px;
+    line-height: 30px;
+}
+
+                                                                    /* PRESENTATION HOVER */
+
+.presentation-container {
+    z-index: 3;
+    position: absolute;
+    background: transparent;
+    width: 450px;
+    height: 400px;
+    left: 165vw;
+    top: 40px;
+    line-height: 34px;
+    opacity: 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+    transition: 1s ease-in-out;
+    /* transition: opacity cubic-bezier(0, 0.52, 1, 1) 1s; */
+}
+
+
+.title-two:hover + .presentation-container {
+    display: inline-block;
+    opacity: 1;
+}
+
+                                                                    /* BTN DOWNLOAD CV */
+
+.btn-download {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    /* background: var(--black-color); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 138px;
+    left: 170vw;
+    transition: .3s ease-in-out;
+}
+
+.btn-download:hover {
+    transform: scale(1.2);
+    will-change: transform;
+    transform: perspective(2000px) rotateX(7deg) rotateY(14deg) scale3d(1.05, 1.05, 10.5);
+    background: var(--black-color);
+}
+
+.btn-download:hover > #txt-btn-download {
+    color: var(--sub-color);
+}
+
+.logo-btn-download {
+    position: absolute;
+    width: 122px;
+    height: 122px;
+    background: var(--sub-color);
+    border-radius: 50%;
+    /* filter: brightness(1.5) contrast(1.5); */
+}
+
+#txt-btn-download {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: rotateText 10s linear infinite;
+    color: var(--black-color);
+}
+
+@keyframes rotateText {
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+#txt-btn-download span {
+    position: absolute;
+    left: 50%;
+    font-size: 1.5rem;
+    transform-origin: 0 100px;
+}
+
+                                                                        /* CARD ABOUTME */
+
+.card {
+    position: absolute;
+    z-index: 0;
+    left: 210vh;
+    top:33vw;
+    height: 50vh;
+    width: 50vw;
+    /* background:var(--sub-color); */
+}
+
+.card-container {
+    font-family: "font-1";
+    font-weight: 900;
+    letter-spacing: 3px;
+    margin-left: 15px;
+}
+
+#card-title {
+    display: inline-block;
+    font-size: 40px;
+    align-items: center;
+}
+
+#question-card {
+    font-weight: 900;
+    font-size: 1.3rem;
+}
+
+                                        /* LINE AND BG RIGHT PAGE TWO */
+
+.background-rightpage-two {
+    position: absolute;
+    height: 190px;
+    width: 240px;
+    background: var(--sub-color);
+    left: 175vw;
+    top: 20vh;
+    will-change: transform;
+    transform: perspective(1000px) rotateX(20deg) rotateY(18deg) scale3d(1.05, 1.05, 10.5);
+    transition: .8s ease-in-out;
+}
+
+.line-rightpage-two {
+    position: absolute;
+    border-top: 5px solid var(--black-color);
+    width: 270px;
+    left: 170vw;
+    top: 22.7vh;
+    transform: rotate(330deg);
+    transition: .8s ease-in-out;
+}
+
+.line-two-rightpage-two {
+    position: absolute;
+    border-top: 5px solid var(--black-color);
+    width: 270px;
+    left: 170vw;
+    top: 39.4vh;
+    transform: rotate(-260deg);
+    transition: .8s ease-in-out;
+}
+
+.title-two:hover ~ .line-rightpage-two {
+    transform: scale(1.3);
+    border-top: 2px solid var(--black-color);
+}
+
+.title-two:hover ~ .line-two-rightpage-two {
+    transform: scale(1.3);
+    border-top: 2px solid var(--black-color);
+}
+
+.title-two:hover ~ .background-rightpage-two {
+    will-change: transform;
+    transform: perspective(1000px) rotateX(90deg) rotateY(-60deg) scale3d(1.05, 1.05, 10.5);
+}
+
+
+                                        /* MY PROJECTS PAGE */
+
+
+.three {
+    background: var(--bg-color);
+}
+
+.scrollable-div-container {
+    background: var(--sub-color);
+    width: 500px;
+    height: 400px;
+    display: flex;
+    margin-left: 125px;
+    position: absolute;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align:justify;
+    padding: 40px;
+    top: 35vh;
+}
+
+#title-websites {
+    position: absolute;
+    margin-left: 250px;
+    top: 210px;
+}
+
+#title-other-projects {
+    position: absolute;
+    margin-left: 1120px;
+    top: 700px;
+}
+
+#title-other-projects, #title-websites {
+    color: var(--black-color);
+}
+
+.scrollable-div-container-two {
+    position: absolute;
+    background: var(--sub-color);
+    width: 500px;
+    height: 400px;
+    display: flex;
+    margin-left: 820px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align:justify;
+    padding: 40px;
+    top: 15vh;
+    left: 210vw;
+}
+
+/* #scrollable-div-one {
+    left: 40vw;
+    float: left;
+} */
+
+
+                            /* LOGO DFILEMENT */
+
+
+
+.four {
+    background: grey;
+}
+
